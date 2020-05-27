@@ -21,7 +21,7 @@ export default function App() {
         <Button title="+" onPress={addGoalHandler} />
       </View>
       <View>
-        {couseGoals.map((goal) => <Text key={goal}>{goal}</Text>)}
+        {couseGoals.map((goal) => <View key={goal} style={styles.listItem}><Text>{goal}</Text></View>)}
       </View>
     </View>
   );
@@ -38,6 +38,13 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  listItem:{
+    padding: 10,
+    margin: 10,
+    backgroundColor: '#ccc',
     borderColor: 'black',
     borderWidth: 1
   }
